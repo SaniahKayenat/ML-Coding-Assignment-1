@@ -1,0 +1,14 @@
+services:
+  dash:
+    build:
+      context: .
+      dockerfile: .Dockerfile
+    image: car-price-predictor:latest
+    container_name: car-price-predictor
+    ports:
+      - "8050:8050"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8050
+    restart: unless-stopped
+
