@@ -57,7 +57,7 @@ docker compose up --build
 
 Then open http://localhost:8050. Stop with `docker compose down`.
 
-## Deploying to the course server
+## Deploying live
 
 `docker-compose_forDeploy.yaml` is a template based on the reporsitory https://github.com/chaklam-silpasuwanchai/Python-for-Machine-Learning/tree/main/Appendix/Appendix%20-%20Dash%20Plotly . But maybe due to changes in the domain or network
 name, it gives an error of external network not found when
@@ -65,8 +65,8 @@ name, it gives an error of external network not found when
 ```bash
 docker compose -f docker-compose_forDeploy.yaml up --build -d
 ```
-
 is run.
+So, instead, I used render to make the website go live and you can access it as https://ml-coding-assignment-1.onrender.com/ . It may take upto 1 minute to load.
 
 ## How the prediction works
 
