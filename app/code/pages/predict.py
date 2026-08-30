@@ -20,7 +20,7 @@ dash.register_page(__name__, path="/predict")
 # ---------------------------------------------------------------------------
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "car_price_model.pkl")
 model = load(MODEL_PATH)
-
+model.named_steps["model"].n_jobs = 1
 # ---------------------------------------------------------------------------
 # Dropdown option lists -- taken from the categories seen during training.
 # ---------------------------------------------------------------------------
